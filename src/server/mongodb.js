@@ -16,5 +16,3 @@ async function dbConnect() {
         console.error(e)
     }
 }
-
-module.exports = dbConnect
