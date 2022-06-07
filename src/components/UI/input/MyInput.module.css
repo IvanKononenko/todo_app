@@ -1,0 +1,9 @@
+
+.myInput {
+    margin: auto;
+    width: 600px;
+    height: 26px;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

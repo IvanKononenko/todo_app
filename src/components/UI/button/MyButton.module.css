@@ -1,0 +1,47 @@
+.myBtnInput {
+    color: black;
+    position: relative;
+    left: 3px;
+    right: 0px;
+    border: 1px solid black;
+    background-color: #45e8fd;
+    height: 30px;
+    width: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.myBtnDelete {
+    font-size: 8px;
+    color: white;
+    position: relative;
+    left: -10px;
+    bottom: 0px;
+    background-color: rgba(231, 69, 69, 0.69);
+    height: 15px;
+    width: 16px;
+    padding: 1px 1px 1px 1px;
+    border: 1px solid black;
+}
+
+.myBtnActive {
+    font-size: 9px;
+    color: black;
+    position: relative;
+    top: 0px;
+    left: -490px;
+    border: 1px solid black;
+    height: 16px;
+    width: 16px;
+}
+.myBtnDone {
+    font-size: 9px;
+    color: black;
+    position: relative;
+    top: 0px;
+    left: -490px;
+    background-color: #55a255;
+    border: 1px solid black;
+    height: 16px;
+    width: 16px;
+}
