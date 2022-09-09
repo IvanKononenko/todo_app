@@ -101,6 +101,26 @@ function App() {
             .catch(err => console.log(err))
     }
 
+    const countActiveTasks = () =>{
+        let numberOfActiveTask=0
+        for (let i=0;i<tasks.length;i++) {
+            if (!tasks[i].completed) {
+                numberOfActiveTask++;
+            }
+        }
+        return numberOfActiveTask
+    }
+
+    const countCompletedTasks = () =>{
+        let numberOfCompletedTask=0
+        for (let i=0;i<tasks.length;i++) {
+            if (tasks[i].completed) {
+                numberOfCompletedTask++;
+            }
+        }
+        return numberOfCompletedTask
+    }
+
 
     return (
         <div className="App">
@@ -109,7 +129,7 @@ function App() {
 
             <MyInput create={createTask} setTasks={setTasks}/>
 
-            <h2>Active tasks ({tasks.length})</h2>
+            <h2>Active tasks ({countActiveTasks()})</h2>
 
             <TasksList tasks={tasks}
                        deleteTask={deleteTask}
@@ -118,7 +138,7 @@ function App() {
                        tasksFilter="active"
             />
 
-            <h2>Completed tasks ({tasks.length})</h2>
+            <h2>Completed tasks ({countCompletedTasks()})</h2>
 
             <TasksList tasks={tasks}
                        deleteTask={deleteTask}
@@ -129,8 +149,8 @@ function App() {
 
             <div className={popup.overlay}></div>
             <form action="" className={popup.editWindow}>
-                <input value={tempTaskName} onChange={event=>setTempTaskName(event.target.value)}></input>
-                <button type="submit" onClick={changeTaskNameInDb}>Save</button>
+                <input className='renameInput' value={tempTaskName} onChange={event=>setTempTaskName(event.target.value)}></input>
+                <button className='renameSaveButton' type="submit" onClick={changeTaskNameInDb}>Save</button>
             </form>
 
         </div>);

@@ -1,38 +1,43 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .task-enter {
-  transform: translateX(-350px);
+    transform: translateX(-350px);
 }
+
 .task-enter-active {
-  transform: translateX(0px);
-  transition: all 500ms ease-in;
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
 }
+
 .task-exit {
-  opacity: 1;
+    opacity: 1;
 }
+
 .task-exit-active {
- transform: translateX(-350px);
-  transition: all 500ms ease-in;
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
 }
 
 .overlay_off {
-    position:absolute;
-    display:none;
+    position: absolute;
+    display: none;
     background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
+
 .overlay_on {
-    position:absolute;
+    position: absolute;
     /*display:none;*/
     background-color: rgba(0, 0, 0, 0.7);
     top: 0;
@@ -40,6 +45,7 @@
     bottom: 0;
     right: 0;
 }
+
 .editWindow_off {
     position: absolute;
     width: 300px;
@@ -53,16 +59,40 @@
     margin-left: -150px;
     margin-top: -75px;
 }
-.editWindow_on {
-     position: absolute;
-     width: 300px;
-     height: 30px;
-     /*display: none;*/
-     background-color: white;
-     text-align: center;
 
-     top: 50%;
-     left: 50%;
-     margin-left: -150px;
-     margin-top: -75px;
- }
+.editWindow_on {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 60px;
+    /*display: none;*/
+    background: linear-gradient(to right, lightskyblue, lightblue);
+
+    text-align: center;
+    border-radius: 10px;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    /*margin-top: -75px;*/
+}
+
+.renameInput {
+    width: 500px;
+    height: 36px;
+    border: 1px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: linear-gradient(to right, lightblue, lightskyblue);
+
+}
+.renameSaveButton {
+    margin-left: 5px;
+    height: 40px;
+    border: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #55a255;
+}
