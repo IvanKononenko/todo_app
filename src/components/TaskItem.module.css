@@ -11,8 +11,9 @@
 }
 
 .taskContent {
-    padding-left: 2px;
+    padding-left: 4px;
     height: 26px;
     width: 500px;
-    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
